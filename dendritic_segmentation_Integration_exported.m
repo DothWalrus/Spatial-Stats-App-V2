@@ -435,7 +435,7 @@ classdef dendritic_segmentation_Integration_exported < matlab.apps.AppBase
             app.ThresholdSlider.MajorTicks = [0 0.2 0.4 0.6 0.8 1];
             app.ThresholdSlider.MinorTicks = [0.1 0.3 0.5 0.7 0.9];
             app.ThresholdSlider.Position = [380 121 150 3];
-            app.ThresholdSlider.Value = 0.2;
+            app.ThresholdSlider.Value = 0.1;
 
             % Create CloseFiguresButton
             app.CloseFiguresButton = uibutton(app.UIFigure, 'push');

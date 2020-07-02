@@ -234,8 +234,9 @@ classdef dendritic_segmentation_Integration_exported < matlab.apps.AppBase
             
             % save diagnostic TXT file
             DC_count = sum(Nuclei_Dendritic(:)); % Number of identified DC's
-            params = {'Nuclear Channel','Dendritic Channel', 'Threshold', 'Disk Size', 'DC Count'};
-            param_values = [Nindex, DCindex, k_threshold, disk_size, DC_count];
+            nuclei_count = sum(Nuclei_Centers(:));  % count all identificied nuclei within the ROI (not just DCs)
+            params = {'Nuclear Channel','Dendritic Channel', 'Threshold', 'Disk Size', 'DC Count', 'Total nuclei Count'};
+            param_values = [Nindex, DCindex, k_threshold, disk_size, DC_count, nuclei_count];
             %disp(DC_count);
             txt_name = strcat(saved_file_name,'.txt');
             txt_id = fopen(txt_name,'w');
